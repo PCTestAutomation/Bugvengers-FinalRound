@@ -26,7 +26,7 @@
 		Solution can be find from respective folder in GITHub: 
 		Tool used: Apache JMeter and Jenkins (Open Source)
 		
-# Performance Test Automation
+# Testing Approach for a Manual Project
 
 		Designing Test Approach
 		Worked on Test Strategy
