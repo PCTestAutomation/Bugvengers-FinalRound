@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.52 s <<< FAILURE! - in TestSuite
+com.automation.testcases.web.HomePageTest.afterMethod  Time elapsed: 14.328 s  <<< FAILURE!
+java.lang.AssertionError: 
+The following asserts failed:
+	failed to click on the target element -  element click intercepted: Element <input data-cy="toCity" id="toCity" type="text" class="fsw_inputField lineHeight36 latoBlack font30" readonly="" value="Bengaluru"> is not clickable at point (776, 284). Other element would receive the click: <input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" value="">
+  (Session info: chrome=101.0.4951.64)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'IN-C02D733KMD6M.local', ip: 'fe80:0:0:0:4a5:a4e2:8d67:7379%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /var/folders/yc/cpj0dgpd3gz...}, goog:chromeOptions: {debuggerAddress: localhost:50957}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 95f06f59fca8f56ffdf941d1d8f8ce72
+
