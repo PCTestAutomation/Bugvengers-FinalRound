@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>APITest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 18 15:49:11 IST 2022</td>
+<td>Started on:</td><td>Tue May 24 23:27:41 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1724 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7271 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,25 +75,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.automation.testcases.mobile.Flow1Test.flow1Test()'><b>flow1Test</b><br>Test class: com.automation.testcases.mobile.Flow1Test<br>Test method: Performing Drag and Drop</td>
-<td><div><pre>java.lang.NoSuchMethodException: com.automation.pages.mobile.DragandDropPage.&lt;init&gt;(io.appium.java_client.android.AndroidDriver, com.aventstack.extentreports.ExtentTest)
-	at java.lang.Class.getConstructor0(Class.java:3082)
-	at java.lang.Class.getConstructor(Class.java:1825)
-	at com.automation.pages.mobile.ViewsPage.getPage(ViewsPage.java:83)
-	at com.automation.pages.mobile.ViewsPage.scrollToElementAndClick(ViewsPage.java:74)
-	at com.automation.testcases.mobile.Flow1Test.flow1Test(Flow1Test.java:39)
+<td title='com.automation.testcases.api.DummyTestCase.dummyTestCaseForGetCall()'><b>dummyTestCaseForGetCall</b><br>Test class: com.automation.testcases.api.DummyTestCase<br>Test method: Dummy API Description for Get Call</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	Verify if the Response code is &quot;200&quot; expected [201] but found [200]
+	at com.automation.testcases.api.DummyTestCase.dummyTestCaseForGetCall(DummyTestCase.java:62)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace917381726", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace917381726'><pre>java.lang.NoSuchMethodException: com.automation.pages.mobile.DragandDropPage.&lt;init&gt;(io.appium.java_client.android.AndroidDriver, com.aventstack.extentreports.ExtentTest)
-	at java.lang.Class.getConstructor0(Class.java:3082)
-	at java.lang.Class.getConstructor(Class.java:1825)
-	at com.automation.pages.mobile.ViewsPage.getPage(ViewsPage.java:83)
-	at com.automation.pages.mobile.ViewsPage.scrollToElementAndClick(ViewsPage.java:74)
-	at com.automation.testcases.mobile.Flow1Test.flow1Test(Flow1Test.java:39)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace688797555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688797555'><pre>java.lang.AssertionError: The following asserts failed:
+	Verify if the Response code is &quot;200&quot; expected [201] but found [200]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at com.automation.testcases.api.DummyTestCase.dummyTestCaseForGetCall(DummyTestCase.java:62)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,31 +114,8 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 </pre></div></td>
-<td>7</td>
-<td>com.automation.testcases.mobile.Flow1Test@b59d31</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.automation.testcases.api.DummyTestCase.dummyTestCase()'><b>dummyTestCase</b><br>Test class: com.automation.testcases.api.DummyTestCase<br>Test method: Dummy API Description</td>
-<td></td>
-<td>0</td>
+<td>6</td>
 <td>com.automation.testcases.api.DummyTestCase@40f08448</td></tr>
-<tr>
-<td title='com.automation.testcases.web.HomePageTest.verifySearch()'><b>verifySearch</b><br>Test class: com.automation.testcases.web.HomePageTest<br>Test method: Enter Search keyword in searchbox and perform search</td>
-<td></td>
-<td>3</td>
-<td>com.automation.testcases.web.HomePageTest@25359ed8</td></tr>
-<tr>
-<td title='com.automation.testcases.web.HomePageTest.verifySearch()'><b>verifySearch</b><br>Test class: com.automation.testcases.web.HomePageTest<br>Test method: Enter Search keyword in searchbox and perform search</td>
-<td></td>
-<td>2</td>
-<td>com.automation.testcases.web.HomePageTest@1176dcec</td></tr>
 </table><p>
 </body>
 </html>

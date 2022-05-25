@@ -2,6 +2,7 @@ package com.automation.functions;
 
 import java.util.HashMap;
 
+import com.automation.base.BaseAPITest;
 import com.automation.base.BaseFixture;
 
 import io.restassured.RestAssured;
@@ -17,11 +18,37 @@ public class RestClientWrapper extends BaseFixture {
 	private RequestSpecification request;
 	private Response restResponse;
 
+	
+	// key and Token passed as query param
 	public RestClientWrapper(String baseUrl, RequestSpecification request, String Userkey, String Usertoken) {
 		this.request = request;
 		this.request.baseUri(baseUrl).relaxedHTTPSValidation("TLS").queryParam("key", Userkey)
 				.queryParam("token", Usertoken).log().all();
 	}
+	
+	// for open api
+	public RestClientWrapper(String baseUrl, RequestSpecification request) {
+		this.request = request;
+		this.request.baseUri(baseUrl).relaxedHTTPSValidation("TLS").log().all();
+	}
+	
+	// key and token passed as
+	public RestClientWrapper(String baseUrl, RequestSpecification request,String username, String password,boolean flag) {
+		if (flag)
+		{
+			BaseAPITest  baseAPITest=new BaseAPITest();
+			baseAPITest.loginAndGetToken(username, password);
+			String userToken=baseAPITest.getAccessToken();
+			String userKey=baseAPITest.getUserID();
+			
+		this.request = request;
+		this.request.baseUri(baseUrl).relaxedHTTPSValidation("TLS").log().all();
+		this.request.baseUri(baseUrl).relaxedHTTPSValidation("TLS").queryParam("key", userKey)
+		.queryParam("token", userToken).log().all();
+		}
+	}
+	
+	
 
 	public Response get(String resource) throws Exception {
 
@@ -91,6 +118,13 @@ public class RestClientWrapper extends BaseFixture {
 	public Response delete(String resource) throws Exception {
 
 		restResponse = request.delete(resource);
+
+		return restResponse;
+	}
+	
+	public Response putWithPathParamAndQueryParam(String resource, String paramName,String pathParamValue,HashMap<String, String> params) throws Exception {
+
+		restResponse = request.when().pathParam(paramName, pathParamValue).queryParams(params).put(resource);
 
 		return restResponse;
 	}

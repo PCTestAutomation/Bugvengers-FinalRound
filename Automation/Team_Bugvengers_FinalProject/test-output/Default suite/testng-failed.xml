@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pom.crimson.testcases.momentlog.medium.GrowthLogPageTest">
+      <class name="com.automation.testcases.api.DummyTestCase">
         <methods>
-          <include name="verifyMomentCreationWithImageHeight_GrowthLogPageTest"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="beforeMethod"/>
+          <include name="dummyTestCaseForGetCall"/>
           <include name="afterTest"/>
-          <include name="beforeLocalMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.pom.crimson.testcases.momentlog.medium.GrowthLogPageTest -->
+      </class> <!-- com.automation.testcases.api.DummyTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

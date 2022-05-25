@@ -3,12 +3,10 @@
 	<listeners>
 		<listener class-name="com.automation.listeners.TestListener" />
 	</listeners>
-	<test name="HomepageTestChrome">
-	<parameter name="passScreenshotFlag" value="Yes"/>
-  <parameter name="testType" value="Web" />
-  	<parameter name="platformName" value="chrome" />
+	<test name="APITest">
+  <parameter name="testType" value="API" />
 		<classes>
- 			<class name="com.automation.testcases.web.HomePageTest"></class>
+ 			<class name="com.automation.testcases.api.DummyTestCase"></class>
 		</classes>
 	</test>
 	

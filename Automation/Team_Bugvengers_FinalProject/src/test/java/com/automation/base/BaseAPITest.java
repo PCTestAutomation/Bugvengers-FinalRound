@@ -41,8 +41,9 @@ public class BaseAPITest extends BaseFixture {
 	 * @param password
 	 * @return the token as String from the response json
 	 */
+	// subject to change
 	public void loginAndGetToken(String username, String password) {
-		RestAssured.baseURI = getProperties().getProperty("OKTAAPIURL");
+		RestAssured.baseURI = getProperties().getProperty("APIURL");
 
 		System.out.println("Before Rest Call");
 		Response response = RestAssured.given().log().all().contentType(ContentType.JSON).accept(ContentType.JSON)
