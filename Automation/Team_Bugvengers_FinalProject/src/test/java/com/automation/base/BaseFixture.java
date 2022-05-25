@@ -104,7 +104,7 @@ public class BaseFixture {
 		});
 }
 
-	public Properties getProperties() {
+	public static Properties getProperties() {
 		return prop.get();
 	}
 
@@ -331,7 +331,7 @@ public class BaseFixture {
 		if (getTestType().equals("Mobile")) {
 			getMobileDriver().closeApp();
 		}
-		getSoftAssert().assertAll();
+		//getSoftAssert().assertAll();
 	}
 
 	@AfterTest()

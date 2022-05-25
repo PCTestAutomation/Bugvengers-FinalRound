@@ -3,12 +3,14 @@
 	<listeners>
 		<listener class-name="com.automation.listeners.TestListener" />
 	</listeners>
-	<test name="APITest">
-  <parameter name="testType" value="API" />
+	
+	<test name="NagarroYammerSiteChrome">
+	<parameter name="passScreenshotFlag" value="Yes"/>
+  <parameter name="testType" value="Web" />
+  	<parameter name="platformName" value="chrome" />
 		<classes>
- 			<class name="com.automation.testcases.api.DummyTestCase"></class>
+ 			<class name="com.automation.testcases.web.HomePageTest"></class>
 		</classes>
 	</test>
-	
 	
 </suite> <!-- Suite -->

@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.api.DummyTestCase" hash-for-method="dummyTestCaseForGetCall">dummyTestCaseForGetCall</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.automation.testcases.web.HomePageTest" hash-for-method="verifySearch">verifySearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,16 +120,16 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.automation.testcases.api.DummyTestCase</span>
+              <span class="class-name">com.automation.testcases.web.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="dummyTestCaseForGetCall">
-                  </a> <!-- dummyTestCaseForGetCall -->
-                  <span class="method-name">dummyTestCaseForGetCall</span>
+                  <a name="verifySearch">
+                  </a> <!-- verifySearch -->
+                  <span class="method-name">verifySearch</span>
                   <em>
-(Dummy API Description for Get Call)                  </em>
+(Navigate To Yammer site)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,12 +147,14 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.automation.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;APITest&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;testType&quot; value=&quot;API&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;NagarroYammerSiteChrome&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;passScreenshotFlag&quot; value=&quot;Yes&quot;/&gt;
+    &lt;parameter name=&quot;testType&quot; value=&quot;Web&quot;/&gt;
+    &lt;parameter name=&quot;platformName&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.automation.testcases.api.DummyTestCase&quot;/&gt;
+      &lt;class name=&quot;com.automation.testcases.web.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- APITest --&gt;
+  &lt;/test&gt; &lt;!-- NagarroYammerSiteChrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,7 +166,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">APITest (1 class)</span>
+                <span class="test-name">NagarroYammerSiteChrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'dummyTestCaseForGetCall')
-data.setCell(0, 2, 'com.automation.testcases.api.DummyTestCase')
-data.setCell(0, 3, 3387);
+data.setCell(0, 1, 'verifySearch')
+data.setCell(0, 2, 'com.automation.testcases.web.HomePageTest')
+data.setCell(0, 3, 48123);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 53 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -225,30 +227,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.automation.testcases.api.DummyTestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.automation.testcases.web.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(API, androidOnly, null, MobileOnly, MobileOnly, androidOnly, androidOnly, iOSOnly, iOSOnly, MobileOn...)</span>
+                <span class="method-name">beforeTest(Web, androidOnly, chrome, MobileOnly, MobileOnly, androidOnly, androidOnly, iOSOnly, iOSOnly, Yes, o...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">beforeClass(API)</span>
-                <span class="method-start">710 ms</span>
+                <span class="method-name">beforeClass(Web)</span>
+                <span class="method-start">2357 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">716 ms</span>
+                <span class="method-start">2367 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">dummyTestCaseForGetCall</span>
-                <span class="method-start">716 ms</span>
+                <span class="method-name">verifySearch</span>
+                <span class="method-start">3801 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">4404 ms</span>
+                <span class="method-start">53228 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">4405 ms</span>
+                <span class="method-start">53231 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

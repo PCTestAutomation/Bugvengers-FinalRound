@@ -4,19 +4,21 @@
   <listeners>
     <listener class-name="com.automation.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="APITest(failed)" parallel="tests">
-    <parameter name="testType" value="API"/>
+  <test thread-count="5" name="NagarroYammerSiteChrome(failed)" parallel="tests">
+    <parameter name="passScreenshotFlag" value="Yes"/>
+    <parameter name="testType" value="Web"/>
+    <parameter name="platformName" value="chrome"/>
     <classes>
-      <class name="com.automation.testcases.api.DummyTestCase">
+      <class name="com.automation.testcases.web.HomePageTest">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="dummyTestCaseForGetCall"/>
           <include name="afterTest"/>
+          <include name="verifySearch"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.automation.testcases.api.DummyTestCase -->
+      </class> <!-- com.automation.testcases.web.HomePageTest -->
     </classes>
-  </test> <!-- APITest(failed) -->
+  </test> <!-- NagarroYammerSiteChrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

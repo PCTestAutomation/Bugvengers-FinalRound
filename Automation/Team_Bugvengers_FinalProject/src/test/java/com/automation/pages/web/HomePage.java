@@ -1,10 +1,16 @@
 package com.automation.pages.web;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import com.automation.base.BaseFixture;
 import com.automation.base.BaseWebPage;
 import com.automation.functions.GenericWebFunctions;
 import com.automation.util.Constants;
@@ -16,90 +22,116 @@ import com.aventstack.extentreports.Status;
 public class HomePage extends BaseWebPage {
 	
 	
-	@FindBy(xpath=WebLocators.FROMCITY_INPUT)
-	protected WebElement fromCityTxtBox;
+	@FindBy(xpath=WebLocators.COMMUNITY_LINK)
+	protected WebElement communityLink;
 	
-	@FindBy(xpath=WebLocators.FROMCITY_TEXT)
-	protected WebElement fromCityInputBox;
+	@FindBy(xpath=WebLocators.EMAIL_BOX)
+	protected WebElement email;
 	
-	@FindBy(xpath=WebLocators.FIRSTOPTION_LIST)
-	protected WebElement firstOption;
+	@FindBy(xpath=WebLocators.SUBMIT_BTN)
+	protected WebElement submit;
 	
-	@FindBy(xpath=WebLocators.CITY_COMBOBOX)
-	protected WebElement cityCombobox;
+	@FindBy(xpath=WebLocators.PASSWORD_BOX)
+	protected WebElement password;
 	
-	@FindBy(xpath=WebLocators.TOCITY_INPUT)
-	protected WebElement toCityTxtBox;
+	@FindBy(xpath=WebLocators.ALL_LINK)
+	protected WebElement allLink;
 	
-	@FindBy(xpath=WebLocators.TOCITY_TEXT)
-	protected WebElement toCityInputBox;
+	@FindBy(xpath=WebLocators.GROUP_CONTAINER)
+	protected List<WebElement> groupContainer;
 	
-	@FindBy(xpath=WebLocators.SEARCH_BUTTON)
-	protected WebElement searchBtn;
-	
-	@FindBy(xpath=WebLocators.DATE)
-	protected WebElement date;
-	
-	@FindBy(xpath=WebLocators.DATEFUTURE)
-	protected WebElement datePicker;
+	@FindBy(xpath=WebLocators.MEMBER_LINK)
+	protected WebElement memberLink;
 	
 	
 	
 	
 	
 	
-	
-	
-	
-	public void enterFromCityAndEnter()
+	public void clickCommunityLink()
 	{
-		GenericWebFunctions.waitUntil(fromCityTxtBox,"visible");
-		GenericWebFunctions.clickByWebElement(fromCityTxtBox);
-		GenericWebFunctions.waitUntil(cityCombobox,"visible");
-		GenericWebFunctions.waitUntil(fromCityInputBox,"visible");
-		ExtentReportManager.getTest().log(Status.INFO, "Entering Text in From City: "+Constants.FROM_CITY);
-		GenericWebFunctions.sendKeysByElement(fromCityInputBox, Constants.FROM_CITY);
-		GenericWebFunctions.sendKeysByElement(fromCityInputBox, Keys.ENTER);	
-	}
-	//
-	public void selectFirstCity() throws InterruptedException
-	{
-		GenericWebFunctions.waitUntil(firstOption,"visible");
-		ExtentReportManager.getTest().log(Status.INFO, "Selecting first option from city dropdown");
-		GenericWebFunctions.clickByWebElement(firstOption);	
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking Community Link: ");
+		GenericWebFunctions.waitUntil(communityLink,"visible");
+		GenericWebFunctions.clickByWebElement(communityLink);
+		
+		
 	}
 	
-	public void enterToCityAndEnter() throws InterruptedException
+	public void enterCredentials()
 	{
-		GenericWebFunctions.waitUntil(toCityTxtBox,"visible");
-		GenericWebFunctions.clickByWebElement(toCityTxtBox);
-		GenericWebFunctions.waitUntil(cityCombobox,"visible");
-		GenericWebFunctions.waitUntil(toCityInputBox,"visible");
-		ExtentReportManager.getTest().log(Status.INFO, "Entering Text in To City: "+Constants.TO_CITY);
-		toCityInputBox.clear();
-		Thread.sleep(3000);
-		GenericWebFunctions.sendKeysByElement(toCityInputBox, Constants.TO_CITY);
+		ExtentReportManager.getTest().log(Status.INFO, "Entering email ");
+		GenericWebFunctions.waitUntil(email,"visible");
 		
-		GenericWebFunctions.sendKeysByElement(toCityInputBox, Keys.ENTER);
-		Thread.sleep(1000);
+		GenericWebFunctions.sendKeysByElement(email, BaseFixture.getProperties().getProperty("username"));
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking Next ");
+		GenericWebFunctions.waitUntil(submit,"visible");
+		GenericWebFunctions.clickByWebElement(submit);
+		ExtentReportManager.getTest().log(Status.INFO, "Entering password ");
+		GenericWebFunctions.waitUntil(password,"visible");
+		GenericWebFunctions.sendKeysByElement(email, BaseFixture.getProperties().getProperty("password"));
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking Submit ");
+		GenericWebFunctions.waitUntil(submit,"visible");
+		GenericWebFunctions.clickByWebElement(submit);
+		//GenericWebFunctions.waitUntil(submit,"visible");
+	//	GenericWebFunctions.clickByWebElement(submit);
+	//	GenericWebFunctions.waitUntil(submit,"visible");
+		//GenericWebFunctions.clickByWebElement(submit);
+			
+	}
+	
+	public void clickAllLink()
+	{
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking All Link: ");
+		GenericWebFunctions.waitUntil(allLink,"visible");
+		GenericWebFunctions.clickByWebElement(allLink);
 		
+		
+	}
 
+	public void getGroupName()
+	{
+		ExtentReportManager.getTest().log(Status.INFO, "Getting all groups ");
+		GenericWebFunctions.waitUntil(groupContainer,"visible");
+		ArrayList<Long> memberCount = new ArrayList<Long>();
+		
+		for( WebElement ele:groupContainer )
+		{
+			WebElement groupName=ele.findElement(By.xpath(WebLocators.GROUP_NAME));
+			System.out.println(groupName.getText());
+			WebElement membercount=ele.findElement(By.xpath(WebLocators.MEMBER_COUNT));
+			System.out.println(membercount.getText());
+			String count=membercount.getText().replace(",", "").replace("members", "").trim();
+			System.out.println("count: "+count);
+			memberCount.add(Long.parseLong(count));
+		}
+		
+		Collections.sort(memberCount);
+		for( Long co:memberCount )
+		{
+			System.out.println("sorted count"+co);
+		}
 		
 	}
-	public void clickSearchBtn()
+	
+	public void navigateToCommunityAndClick()
 	{
-		GenericWebFunctions.waitUntil(searchBtn,"visible");
-		ExtentReportManager.getTest().log(Status.INFO, "Clicking Search Button");
-		GenericWebFunctions.clickByWebElement(searchBtn);	
+		WebElement community=BaseFixture.getWebDriver().findElement(By.xpath("//div[starts-with(@class, 'inner') and contains(text(),'NQLB - No QA Left Behind')]")); 
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking NQLB - No QA Left Behind community ");
+		GenericWebFunctions.waitUntil(community,"visible");
+		GenericWebFunctions.clickByWebElement(community);
+		
 	}
 	
-	public void clickDate()
+	
+	public void navigateToMemberAndClick()
 	{
-		GenericWebFunctions.waitUntil(datePicker,"visible");
-		ExtentReportManager.getTest().log(Status.INFO, "Clicking Date");
-		//GenericWebFunctions.clickByWebElement(date);
-		GenericWebFunctions.clickByWebElement(datePicker);
+		ExtentReportManager.getTest().log(Status.INFO, "Clicking on Member Link ");
+		GenericWebFunctions.waitUntil(memberLink,"visible");
+		GenericWebFunctions.clickByWebElement(memberLink);
+		
 	}
+	
+	
 	
 
 	

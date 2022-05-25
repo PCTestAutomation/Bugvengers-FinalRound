@@ -2,19 +2,24 @@ package com.automation.util;
 
 public class WebLocators {
 	
-	public static final String FROMCITY_INPUT = "//input[@id='fromCity']";
-	public static final String FROMCITY_TEXT = "//input[@type='text' and @placeholder='From']";
-	public static final String TOCITY_TEXT = "//input[@type='text' and @placeholder='To']";
-	public static final String TOCITY_INPUT = "//input[@id='toCity']";
-	public static final String CITY_COMBOBOX = "//ul[@role='listbox' and @class='react-autosuggest__suggestions-list']";
-	public static final String FIRSTOPTION_LIST = "//li[@role='option' and @data-suggestion-index='0']";
-	public static final String SEARCH_BUTTON = "//a[ contains(text(),'Search')]";
-	public static final String BACKDROP = "//div[@class='hsBackDrop']";
-	public static final String DATE="//div[ @class='DayPicker-Day DayPicker-Day--start DayPicker-Day--selected']";
-	public static final String DATE_PICKER="//div[ @class='DayPicker-Day DayPicker-Day--selected']";
-	public static final String DATEFUTURE=".//div[@aria-label='Mon May 30 2022']";
+	public static final String COMMUNITY_LINK = "//div[@title='Communities']";
+	public static final String ALL_LINK = "//span[text()='All']";
+	public static final String GROUP_CONTAINER=".//div[starts-with(@class, 'body')]";
 	
-	public static final String PRICE=".//p[@class='blackText fontSize16 blackFont']";
+	public static final String GROUP_NAME = ".//span[starts-with(@class, 'groupName')]";
+	
+	public static final String MEMBER_COUNT = ".//div[contains(text(),'members')]";
+	
+	public static final String EMAIL_BOX="//input[@type='email']";
+	public static final String SUBMIT_BTN="//input[@type='submit']";
+	public static final String PASSWORD_BOX="//input[@name='passwd']";
+	
+	public static final String MEMBER_LINK="//span[starts-with(@class, 'y-fakeLink' )and contains(text(),'2')]";
+	//span[starts-with(@class, 'text') and contains(text(),'members')]
+	
+	
+
+	
 	
 	
 
