@@ -28,7 +28,7 @@
 		
 # Testing Approach for a Manual Project
 
-		Designing Test  for E2E Testing
+		Designing Test  for Mobile App Testing
 		Worked on Test Strategy
 		Test plan for specific releases
-		Test Estimation of Web, API and Performance task
+		Test Estimation of Mobile testing task
