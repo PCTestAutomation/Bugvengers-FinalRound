@@ -1,0 +1,20 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1653479609815,33,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653479638258,58,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653479638773,55,OS Process Sampler ,0,OK,Thread Group 1-2,text,true,,27,0,1,1,null,0,0,0
+1653479647011,51,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653479647063,42,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653479647523,55,OS Process Sampler ,0,OK,Thread Group 1-2,text,true,,27,0,1,1,null,0,0,0
+1653479647579,42,OS Process Sampler ,0,OK,Thread Group 1-2,text,true,,27,0,1,1,null,0,0,0
+1653480115098,45,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653480115144,43,OS Process Sampler ,0,OK,Thread Group 1-1,text,true,,27,0,1,1,null,0,0,0
+1653480115597,55,OS Process Sampler ,0,OK,Thread Group 1-2,text,true,,27,0,1,1,null,0,0,0
+1653480115653,38,OS Process Sampler ,0,OK,Thread Group 1-2,text,true,,27,0,1,1,null,0,0,0
+1653480196581,47,OS Process Sampler ,0,OK,Thread Group 1-1,text,false,Test failed: text expected to contain /1 file(s) copied./,27,0,1,1,null,0,0,0
+1653480196630,41,OS Process Sampler ,0,OK,Thread Group 1-1,text,false,Test failed: text expected to contain /1 file(s) copied./,27,0,1,1,null,0,0,0
+1653480197092,61,OS Process Sampler ,0,OK,Thread Group 1-2,text,false,Test failed: text expected to contain /1 file(s) copied./,27,0,1,1,null,0,0,0
+1653480197154,39,OS Process Sampler ,0,OK,Thread Group 1-2,text,false,Test failed: text expected to contain /1 file(s) copied./,27,0,1,1,null,0,0,0
+1653480209603,43,OS Process Sampler ,0,OK,Thread Group 1-1,text,false,Test failed: text expected to contain /1 file(s) tcopied./,27,0,1,1,null,0,0,0
+1653480209646,48,OS Process Sampler ,0,OK,Thread Group 1-1,text,false,Test failed: text expected to contain /1 file(s) tcopied./,27,0,1,1,null,0,0,0
+1653480210117,53,OS Process Sampler ,0,OK,Thread Group 1-2,text,false,Test failed: text expected to contain /1 file(s) tcopied./,27,0,1,1,null,0,0,0
+1653480210170,42,OS Process Sampler ,0,OK,Thread Group 1-2,text,false,Test failed: text expected to contain /1 file(s) tcopied./,27,0,1,1,null,0,0,0

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.automation.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="NagarroYammerSiteChrome(failed)" parallel="tests">
+    <parameter name="passScreenshotFlag" value="Yes"/>
+    <parameter name="testType" value="Web"/>
+    <parameter name="platformName" value="chrome"/>
+    <classes>
+      <class name="com.automation.testcases.web.HomePageTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="verifySearch"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.automation.testcases.web.HomePageTest -->
+    </classes>
+  </test> <!-- NagarroYammerSiteChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
